@@ -1,0 +1,90 @@
+.fc-edge {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 50px;
+  @include max-screen(1366px) {
+      padding-top: 30px;
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  &__list {
+    column-count: 3;
+    margin-bottom: 50px;
+    @include max-screen(1366px) {
+      margin-bottom: 20px;
+    }
+    @include max-screen(768px) {
+      column-count: 2;
+    }
+    @include max-screen(360px) {
+      column-count: 1;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    color: #fff;
+    font-size: 18px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include max-screen(500px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__content {
+    width: 75%;
+    background-color: #fff;
+    padding: 40px;
+    @include max-screen(991px) {
+      width: 100%;
+      padding: 10px;
+    }
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__term {
+    width: 25%;
+    padding: 20px;
+    background-color: $red;
+    color: #fff;
+    @include max-screen(991px) {
+      width: 100%;
+      padding: 10px;
+    }
+    & p {
+      text-align: center;
+    }
+  }
+  &__year {
+    font: bold 65px/75px $main-font;
+    text-align: center;
+    @include max-screen(991px) {
+      font: bold 40px/45px $main-font;
+    }
+    @include max-screen(500px) {
+      font: bold 22px/28px $main-font;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.al-compare {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__card {
+    width: calc(20% - 15px);
+  }
+  &__img {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    @include max-screen(1367px) {
+      height: 200px;
+    }
+    @include max-screen(500px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font: bold 22px/30px $main-font;
+    @include max-screen(1367px) {
+      font: bold 20px/24px $main-font;
+    }
+    @include max-screen(500px) {
+      font: bold 18px/20px $main-font;
+    }
+  }
+}

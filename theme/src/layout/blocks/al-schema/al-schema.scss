@@ -1,0 +1,108 @@
+.al-schema {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    counter-reset: item;
+    @include max-screen(991px){
+      & .slick-arrow {
+        top: 100%;
+      }
+      & .slick-next {
+        right: 30px;
+      }
+      & .slick-prev {
+        left: 30px;
+      }
+    }
+
+  }
+  &__item {
+    width: calc(25% - 60px);
+    margin: 0 30px 60px;
+    &--lg {
+      width: calc(50% - 60px);
+      //@include max-screen(991px){
+      //  display: none!important;
+      //  visibility: hidden;
+      //  position: absolute;
+      //}
+    }
+    @include max-screen(1367px){
+      margin-bottom: 30px;
+    }
+    @include max-screen(480px){
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    padding: 10px;
+    background: #F5F5F5;
+    margin-bottom: 20px;
+    @include max-screen(1367px){
+      width: 150px;
+      height: 150px;
+    }
+    @include max-screen(480px){
+      margin: 0 auto 20px;
+    }
+  }
+  &__numb {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    counter-increment: item;
+    &::before {
+      content: '0'counter(item);
+      font: bold 82px/110px $main-font;
+      color: #9BD2C5;
+      @include max-screen(1367px){
+        font: bold 60px/70px $main-font;
+      }
+    }
+  }
+  &__info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #F5F5F5;
+    &--mob{
+      display: none;
+      @include max-screen(991px){
+        display: flex;
+        align-items: center;
+      }
+    }
+    @include max-screen(480px){
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  &__text {
+    text-align: center;
+    max-width: 200px;
+    @include max-screen(480px){
+      margin: 0 auto 20px;
+    }
+  }
+  &__title {
+    font: bold 24px/32px $main-font;
+    color: $red;
+    margin-bottom: 10px;
+  }
+  &__opus {
+    margin-bottom: 20px;
+  }
+}

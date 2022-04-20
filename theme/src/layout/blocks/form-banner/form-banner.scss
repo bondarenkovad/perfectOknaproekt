@@ -1,0 +1,33 @@
+.form-banner{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  &__container {
+    max-width: 550px;
+    padding: 40px 0;
+    @include max-screen(991px){
+      padding: 30px 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__stock {
+    font: bold 14px/20px $main-font;
+    margin-bottom: 10px;
+  }
+  &__title {
+    max-width: 330px;
+    margin-bottom: 20px;
+    @include max-screen(991px){
+      max-width: 100%;
+    }
+  }
+  &__text-lg {
+    font: 18px/24px $main-font;
+    margin-bottom: 15px;
+  }
+  &__text-sm {
+    font: 12px/16px $main-font;
+  }
+}

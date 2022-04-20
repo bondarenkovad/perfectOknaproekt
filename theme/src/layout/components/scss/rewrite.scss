@@ -1,0 +1,414 @@
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-40 {
+  margin-bottom: 40px;
+  @include max-screen(580px) {
+    margin-bottom: 20px;
+  }
+}
+
+.pb-0 {
+  @include max-screen(580px) {
+    padding-bottom: 0;
+  }
+}
+.pt-0 {
+  @include max-screen(580px) {
+    padding-top: 0;
+  }
+}
+
+.wpcf7-spinner {
+  position: absolute;
+}
+
+.wpcf7 form.sent .wpcf7-response-output,
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output{
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+}
+#page {
+  overflow: hidden !important;
+}
+#delivery {
+  @include max-screen(580px) {
+    padding-top: 40px;
+  }
+}
+
+//.mp-wrapper {
+//  .white-popup {
+//    position: relative;
+//    background: #fff;
+//    padding: 35px 109px;
+//    width: auto;
+//    max-width: 694px;
+//    margin: 20px auto;
+//    text-align: center;
+//    .title {
+//      font-size: 32px;
+//      font-weight: 400;
+//      line-height: 43px;
+//      margin: 0 0 10px;
+//    }
+//    .subtitle {
+//      font-size: 18px;
+//      line-height: 22px;
+//      font-weight: 500;
+//      margin: 0 0 10px;
+//      padding: 0;
+//      color: #000;
+//    }
+//    .form-box {
+//      margin: 0 0 13px;
+//      position: relative;
+//    }
+//    .input_field {
+//      border: 1px solid #c4c4c4;
+//      height: 52px;
+//      padding: 0 10px;
+//      padding-left: 30px !important;
+//      width: 100%;
+//      outline: none;
+//    }
+//    .textarea {
+//      border: 1px solid #c4c4c4;
+//      height: 69px;
+//      padding: 15px 10px;
+//      resize: none;
+//    }
+//    textarea {
+//      padding-left: 30px !important;
+//      width: 100%;
+//      outline: none;
+//      &::-webkit-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::-moz-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &:-ms-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::-ms-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//    }
+//    input[type=submit] {
+//      outline: none;
+//    }
+//    input {
+//      &::-webkit-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::-moz-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &:-ms-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::-ms-input-placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//      &::placeholder {
+//        font: 16px/22px 'Uni Neue';
+//        color: #C1C1C1;
+//      }
+//    }
+//    .input_file {
+//      opacity: 0;
+//      position: absolute;
+//      z-index: -1;
+//      overflow: hidden;
+//      width: .4px;
+//      height: .4px;
+//    }
+//  }
+//  .white-popup__wrapper {
+//    display: -webkit-box;
+//    display: -ms-flexbox;
+//    display: flex;
+//    -ms-flex-wrap: wrap;
+//    flex-wrap: wrap;
+//    -webkit-box-pack: justify;
+//    -ms-flex-pack: justify;
+//    justify-content: space-between;
+//    -webkit-box-align: center;
+//    -ms-flex-align: center;
+//    align-items: center;
+//    margin: 30px 0 0;
+//    .form-box {
+//      width: 48%;
+//    }
+//    p {
+//      display: none;
+//    }
+//  }
+//  .input_file_label {
+//    svg {
+//      margin-left: 10px;
+//    }
+//  }
+//  .white-popup__politics {
+//    font-size: 12px;
+//  }
+//  .mfp-close {
+//    &:hover {
+//      background-color: transparent;
+//    }
+//    &:focus {
+//      background-color: transparent;
+//    }
+//    &:active {
+//      background-color: transparent;
+//    }
+//  }
+//}
+
+//.input_file_label {
+//  display: -webkit-box;
+//  display: -ms-flexbox;
+//  display: flex;
+//  -webkit-box-pack: end;
+//  -ms-flex-pack: end;
+//  justify-content: flex-end;
+//  -webkit-box-align: center;
+//  -ms-flex-align: center;
+//  align-items: center;
+//  cursor: pointer;
+//  color: #dd0060;
+//  text-decoration: underline;
+//  margin: 0 0 30px;
+//  font: 16px/22px 'Uni Neue';
+//}
+
+//.msk-spoilers {
+//  padding: 50px 0;
+//  .title {
+//    margin: 0 auto 30px;
+//  }
+//  .spoiler {
+//    width: 100%;
+//    margin: 25px 0;
+//  }
+//  .spoiler__title {
+//    position: relative;
+//    cursor: pointer;
+//    padding: 0 30px 0 0;
+//    font-size: 26px;
+//    &:hover {
+//      color: #DD0060;
+//    }
+//    &:after {
+//      content: '';
+//      position: absolute;
+//      right: 0;
+//      top: 50%;
+//      width: 10px;
+//      height: 10px;
+//      border-top: 2px solid #DD0060;
+//      border-right: 2px solid #DD0060;
+//      transform: rotate(135deg) translate(0, 50%);
+//      transition: all .3s ease;
+//    }
+//  }
+//  .spoiler__title.active {
+//    &:after {
+//      transform: rotate(315deg) translate(0, -50%);
+//    }
+//    color: #DD0060;
+//  }
+//  .spoiler__text {
+//    display: none;
+//  }
+//}
+//#new-main {
+//  .msk-spoilers {
+//    .container {
+//      max-width: 1200px;
+//    }
+//  }
+//}
+//
+//#banner30082021 {
+//  padding: 30px 0;
+//  height: 440px;
+//  .inner {
+//    position: relative;
+//    max-width: 680px;
+//  }
+//  .content-top {
+//    background: #fff;
+//    padding: 20px 30px;
+//    margin-bottom: 35px;
+//  }
+//  .text-bold {
+//    font: 700 14px/20px 'Uni Neue';
+//    margin-bottom: 10px;
+//  }
+//  .banner-title {
+//    font: 700 36px/46px 'Uni Neue';
+//    color: #DD0060;
+//    margin-bottom: 10px;
+//  }
+//  .text {
+//    font: 500 18px/24px 'Uni Neue';
+//  }
+//  .banner-list {
+//    margin: 0 0 20px;
+//  }
+//  .banner-item {
+//    position: relative;
+//    padding-left: 30px;
+//    font: 500 20px/27px 'Uni Neue';
+//    &::before {
+//      content: '';
+//      position: absolute;
+//      top: 10px;
+//      left: 0;
+//      width: 10px;
+//      height: 10px;
+//      border-radius: 50%;
+//      background: #DD0060;
+//    }
+//    &:not(:last-child) {
+//      margin-bottom: 20px;
+//    }
+//    span {
+//      font: 700 20px/27px 'Uni Neue';
+//    }
+//  }
+//  .gift-btn {
+//    position: absolute;
+//    bottom: 50px;
+//    right: -300px;
+//    display: -webkit-box;
+//    display: -ms-flexbox;
+//    display: flex;
+//    -webkit-box-align: center;
+//    -ms-flex-align: center;
+//    align-items: center;
+//    color: #fff;
+//    padding: 20px;
+//    font: 700 16px/22px 'Uni Neue';
+//    &::before {
+//      content: '';
+//      position: absolute;
+//      right: -18px;
+//      top: -18px;
+//      width: 115px;
+//      height: 115px;
+//      border-radius: 50%;
+//      background: rgba(255,255,255, 0.5);
+//      padding: 10px;
+//      -webkit-transition: all 0.3s;
+//      -o-transition: all 0.3s;
+//      transition: all 0.3s;
+//    }
+//    &::after {
+//      content: '';
+//      position: absolute;
+//      right: -10px;
+//      top: -10px;
+//      border-radius: 50%;
+//      width: 100px;
+//      height: 100px;
+//      background: #fff;
+//      -webkit-transition: all 0.3s;
+//      -o-transition: all 0.3s;
+//      transition: all 0.3s;
+//    }
+//    span {
+//      z-index: 1;
+//      -webkit-transition: color 0.3s;
+//      -o-transition: color 0.3s;
+//      transition: color 0.3s;
+//    }
+//    &:hover {
+//      &::after {
+//        right: 0;
+//        top: 0;
+//        width: 100%;
+//        height: 100%;
+//        border-radius: 50px;
+//      }
+//      &::before {
+//        width: 288px;
+//        height: 102px;
+//        top: -10px;
+//        right: -10px;
+//        border-radius: 50px;
+//      }
+//      span {
+//        color: #DD0060;
+//      }
+//    }
+//    &:focus {
+//      &::after {
+//        right: 0;
+//        top: 0;
+//        width: 100%;
+//        height: 100%;
+//        border-radius: 50px;
+//      }
+//      &::before {
+//        width: 288px;
+//        height: 102px;
+//        top: -10px;
+//        right: -10px;
+//        border-radius: 50px;
+//      }
+//      span {
+//        color: #DD0060;
+//      }
+//    }
+//    &:active {
+//      &::after {
+//        right: 0;
+//        top: 0;
+//        width: 100%;
+//        height: 100%;
+//        border-radius: 50px;
+//      }
+//      &::before {
+//        width: 288px;
+//        height: 102px;
+//        top: -10px;
+//        right: -10px;
+//        border-radius: 50px;
+//      }
+//    }
+//  }
+//  .gift-icon {
+//    margin-left: 50px;
+//    width: 42px;
+//    height: 42px;
+//    fill: #DD0060;
+//    z-index: 1;
+//  }
+//  .container {
+//    max-width: 1200px;
+//    margin: 0 auto;
+//  }
+//  .new-btn {
+//    margin: 0;
+//  }
+//}

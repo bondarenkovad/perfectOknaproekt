@@ -1,0 +1,130 @@
+.r-portfolio {
+  color: #000000;
+  padding: 40px 0;
+  @include max-screen(1366px){
+    padding: 30px 0;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    @include max-screen(991px){
+      & .slick-list,
+      & .slick-track {
+        display: flex;
+      }
+    }
+  }
+  &__card {
+    display: flex!important;
+    flex-direction: column;
+    width: calc(25% - 20px);
+    margin: 0 10px 30px;
+    &--lg {
+      width: calc(50% - 20px);
+    }
+    &--md {
+      width: calc(33.3% - 20px);
+    }
+    @include max-screen(768px){
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    @include max-screen(1366px){
+      height: 200px;
+    }
+    @include max-screen(991px){
+      height: 150px;
+      margin-bottom: 10px;
+    }
+  }
+  &__title {
+    color: #000;
+    font: bold 24px/32px $main-font;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    @include max-screen(991px){
+      font: bold 18px/22px $main-font;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    @include max-screen(991px){
+      margin-bottom: 10px;
+    }
+  }
+  &__link {
+    font: bold 18px/24px $main-font;
+    color: $red;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: auto;
+    transition: color 0.3s;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $green;
+      & .r-portfolio__arrow {
+        & circle{
+          fill: transparent;
+          stroke: $green;
+        }
+        & path {
+          fill: $green;
+        }
+      }
+
+    }
+  }
+  &__arrow {
+    margin-left: 20px;
+    width: 34px;
+    height: 34px;
+    transition: fill 0.3s, stroke 0.3s ;
+    & circle{
+      fill: transparent;
+      stroke: $red;
+    }
+    & path {
+      fill: $red;
+    }
+  }
+  &__list {
+    column-count: 2;
+    @include max-screen(991px){
+      column-count: 1;
+    }
+    &._flex {
+      column-count: 1;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    &._flex {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.al-cards {
+  @include max-screen(768px){
+    & .slick-arrow {
+      top: 30%;
+    }
+  }
+}
+
+a.r-portfolio__title:hover,
+a.r-portfolio__title:focus {
+  color: $red;
+}

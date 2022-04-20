@@ -1,0 +1,65 @@
+.p-promo {
+  &__inner {
+    background: #F5F5F5;
+    text-align: center;
+    padding: 30px;
+    @include max-screen(580px) {
+      padding: 30px 10px;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__phone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font: bold 32px/40px $main_font;
+    color: #000000;
+    transition: color 0.3s;
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+    @include max-screen(580px) {
+      font: bold 24px/30px $main_font;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: $red;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  &__icon {
+    width: 17px;
+    height: 17px;
+    fill: #fff;
+  }
+  &__info {
+    margin-bottom: 20px;
+  }
+  &__link {
+    position: relative;
+    color: $red;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $red;
+      transition: width 0.3s;
+    }
+    &:hover::after,
+    &:focus::after {
+      width: 0;
+    }
+  }
+}

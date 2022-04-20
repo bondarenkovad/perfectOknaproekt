@@ -1,0 +1,62 @@
+// Components
+@import
+  "../components/scss/reset.scss",
+  "../components/scss/mixin.scss",
+  "../components/scss/media.scss",
+  "../components/scss/vars.scss",
+  "../components/scss/ui.scss",
+  "../components/scss/text-container.scss"
+;
+
+// Blocks
+@import
+  //"../blocks/header/header",
+  "../blocks/f-screen/f-screen.scss",
+  "../blocks/infoblock/infoblock",
+  "../blocks/product-price/product-price",
+  "../blocks/windoors/windoors",
+  "../blocks/advantages/advantages",
+  "../blocks/specifications/specifications",
+  "../blocks/our-works/our-works",
+  "../blocks/breadcrumbs/breadcrumbs",
+  "../blocks/p-rehau/p-rehau",
+  "../blocks/r-prices/r-prices",
+  "../blocks/form-banner/form-banner",
+  "../blocks/r-portfolio/r-portfolio",
+  "../blocks/r-table/r-table",
+  "../blocks/billet/billet",
+  "../blocks/r-design/r-design",
+  "../blocks/benefits/benefits",
+  "../blocks/certificate/certificate",
+  "../blocks/more/more",
+  "../blocks/call-measurer/call-measurer",
+  "../blocks/fc-main/fc-main",
+  "../blocks/fc-types/fc-types",
+  "../blocks/fc-systems/fc-systems",
+  "../blocks/fc-profiles/fc-profiles",
+  "../blocks/fc-edge/fc-edge",
+  "../blocks/fc-options/fc-options",
+  "../blocks/faq/faq",
+  "../blocks/fc-sphere/fc-sphere",
+  "../blocks/seo/seo",
+  "../blocks/p-main/p-main",
+  "../blocks/p-design/p-design",
+  "../blocks/p-promo/p-promo",
+  "../blocks/logistics/logistics",
+  "../blocks/delivery/delivery",
+  "../blocks/d-inform/d-inform",
+  "../blocks/del-schedule/del-schedule",
+  "../blocks/al-main/al-main",
+  "../blocks/unique/unique",
+  "../blocks/t-bridge/t-bridge",
+  "../blocks/ventilation/ventilation",
+  "../blocks/al-peculiarities/al-peculiarities",
+  "../blocks/al-compare/al-compare",
+  "../blocks/al-types/al-types",
+  "../blocks/al-minimum/al-minimum",
+  "../blocks/al-catalog/al-catalog",
+  "../blocks/al-furniture/al-furniture",
+  "../blocks/al-schema/al-schema"
+                              ;
+//Rewrite css rules
+@import "../components/scss/rewrite.scss";

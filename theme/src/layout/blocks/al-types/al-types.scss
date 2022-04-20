@@ -1,0 +1,24 @@
+.al-types {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+    font: bold 24px/32px $main-font;
+    margin-bottom: 20px;
+  }
+  &__img {
+    width: calc(33.3% - 40px);
+    margin: 0 20px 20px;
+    height: 300px;
+    object-fit: contain;
+    @include max-screen(1367px) {
+      height: 200px;
+    }
+    @include max-screen(991px) {
+      width: calc(50% - 40px);
+    }
+  }
+}

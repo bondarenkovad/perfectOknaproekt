@@ -1,0 +1,18 @@
+//- главная
+extends ../layout.pug
+
+block head-inner
+	+title('Rehau page')
+	+desc('Rehau page description')
+
+block body-bottom-inner
+
+block sections
+	include ../blocks/p-main/p-main
+	include ../blocks/breadcrumbs/breadcrumbs
+	include ../blocks/p-design/p-design
+	include ../blocks/p-design-2/p-design
+	include ../blocks/p-promo/p-promo
+	include ../blocks/certificate/certificate
+	include ../blocks/call-measurer/call-measurer
+

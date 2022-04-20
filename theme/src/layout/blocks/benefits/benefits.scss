@@ -1,0 +1,98 @@
+.benefits {
+  background-color: $gray-bg;
+  padding: 40px 0;
+  @include max-screen(991px) {
+    padding: 30px 0;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 -1%;
+  }
+  &__item {
+    margin: 0 1% 24px;
+    padding: 5px 20px 5px 110px;
+    background-color: #fff;
+    position: relative;
+    min-height: 133px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    @include max-screen(500px) {
+      padding: 5px 10px 5px 65px;
+    }
+    &--sm {
+      flex: 0 1 31.333%;
+      @include max-screen(991px) {
+        flex: 0 1 48%;
+      }
+      @include max-screen(860px) {
+        flex: 0 1 100%;
+      }
+    }
+    &--md {
+      flex: 0 1 48%;
+      @include max-screen(860px) {
+        flex: 0 1 100%;
+      }
+    }
+    &--transparent {
+      background-color: transparent;
+      padding: 0;
+      align-items: center;
+    }
+    &--btn {
+      align-items: center;
+      @include max-screen(991px) {
+        flex: 0 1 100%;
+      }
+      @include max-screen(500px) {
+        margin-bottom: 0;
+      }
+    }
+    &--lg {
+      flex: 0 1 64.333%;
+      @include max-screen(991px) {
+        flex: 0 1 48%;
+      }
+      @include max-screen(860px) {
+        flex: 0 1 100%;
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    @include max-screen(500px) {
+      top: 0;
+    }
+  }
+  &__num {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    color: #9bd2c5;
+    font: 800  54px/60px $main-font;
+    transform: translateY(-50%);
+    @include max-screen(500px) {
+      left: 5px;
+      font: 800  40px/50px $main-font;
+    }
+  }
+  &__subtitle {
+    font: bold 19px/25px $main-font;
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include max-screen(991px) {
+      margin-bottom: 10px;
+    }
+  }
+
+}

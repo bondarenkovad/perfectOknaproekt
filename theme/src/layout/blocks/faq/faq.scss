@@ -1,0 +1,135 @@
+.faq {
+  background-color: $green;
+  padding: 40px 0;
+  @include max-screen(640px) {
+    padding: 20px;
+  }
+  &__title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    @include max-screen(640px) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  color:#000;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 13px;
+    &.active {
+      .accordion__toggle {
+        background-color: #000;
+      }
+      .accordion__icon {
+        transform: rotate(45deg);
+        &::after,
+        &::before {
+          background-color: #fff;
+        }
+      }
+
+      .accordion__panel {
+        @include value("padding-top", 15, 30);
+        @include value("padding-bottom", 15, 30);
+        @include value("padding-left", 15, 35);
+        background: #F5F5F5;
+        padding-right: 12px;
+        opacity: 1;
+        max-height: 1000px;
+        overflow: auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      & .accordion__btn {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 10px 12px 10px 25px;
+    width: 100%;
+    color: #000;
+    text-align: left;
+    background-color: #fff;
+    @include value("font-size", 15, 20);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+  }
+  &__title {
+    flex-grow: 1;
+    font: 600 20px/30px $main-font;
+    color: #000000;
+  }
+  &__toggle {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+    width: 41px;
+    background-color: #f0f0f9;
+    pointer-events: none;
+    border-radius: 5px;
+  }
+  &__icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+    &:after {
+      content: "";
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      content: "";
+      width: 20px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: #000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform 0.3s ease-in-out;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__panel {
+    width: 100%;
+    @include value("font-size", 13, 16);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0px 10px;
+  }
+}

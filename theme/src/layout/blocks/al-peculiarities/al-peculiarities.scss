@@ -1,0 +1,33 @@
+.al-peculiarities {
+  &__title {
+    max-width: 440px;
+    @include max-screen(1200px) {
+      margin: 0 auto 20px;
+    }
+  }
+  &__list {
+    @include max-screen(500px) {
+      max-height: 200px;
+      overflow-y: auto;
+      padding-right: 15px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #000;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+}

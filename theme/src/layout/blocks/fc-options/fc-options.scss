@@ -1,0 +1,48 @@
+.fc-options {
+  &__wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    @include max-screen(640px) {
+      width: 600px;
+    }
+    & thead {
+      &._green th{
+        background-color: $green;
+      }
+      &._red th {
+        background-color: $red;
+      }
+      th {
+        text-align: left;
+        padding: 10px 20px;
+        color: #fff;
+      }
+    }
+    & tbody {
+      & tr {
+        &:nth-child(even) {
+          background-color: #F5F5F5;
+        }
+      }
+      &._gray {
+        background-color: #F5F5F5;
+      }
+    }
+    & td {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.al-construction {
+  @include max-screen(1100px) {
+    & .fc-options__table {
+      width: 1000px;
+    }
+  }
+}

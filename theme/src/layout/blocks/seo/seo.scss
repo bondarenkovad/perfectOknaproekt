@@ -1,0 +1,34 @@
+.seo {
+  &-block {
+    & h2,
+    & h3 {
+      font: bold 30px/34px $main-font;
+      margin-bottom: 20px;
+      text-align: center;
+      @include max-screen(991px) {
+        font: bold 20px/24px $main-font;
+      }
+    }
+    & p {
+      margin-bottom: 20px;
+    }
+    & ul {
+      margin-bottom: 20px;
+      li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 10px;
+          width: 8px;
+          height: 8px;
+          background-color: #000;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

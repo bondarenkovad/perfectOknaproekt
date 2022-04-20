@@ -1,0 +1,95 @@
+.fc-types {
+  &__container {
+    @include max-screen(991px) {
+      & .slick-list {
+        display: flex;
+        @include max-screen(768px) {
+          display: block;
+        }
+      }
+    }
+    @include max-screen(500px) {
+      & .slick-arrow {
+        top: 30%;
+      }
+    }
+  }
+  &__item {
+    display: flex!important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include max-screen(991px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__wrapper {
+    width: calc(40% - 2px);
+    @include max-screen(768px) {
+      width: 100%;
+      height: 250px;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: calc(60% - 2px);
+    padding: 30px;
+    background: #F5F5F5;
+    @include max-screen(768px) {
+      width: 100%;
+      min-height: 320px;
+      order: 2;
+    }
+    @include max-screen(500px) {
+      padding: 10px;
+    }
+  }
+  &__f-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    @include max-screen(500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__title {
+    font: bold 18px/26px $main-font;
+    color: #000000;
+    text-transform: uppercase;
+    margin-right: 40px;
+  }
+  &__price {
+    font: 14px/18px $main-font;
+    color: $red;
+    & span {
+      font: bold 24px/30px $main-font;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+    @include max-screen(991px) {
+      padding-right: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    @include max-screen(768px) {
+      max-height: 100px;
+    }
+  }
+  &__notice {
+    padding: 10px 25px;
+    background-color: #fff;
+    margin-top: auto;
+  }
+}

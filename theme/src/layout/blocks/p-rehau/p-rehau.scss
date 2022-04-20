@@ -1,0 +1,227 @@
+.p-rehau {
+
+}
+
+.r-tabs {
+  @include max-screen(1200px) {
+    padding: 0 15px;
+  }
+  &__controls {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $green;
+    @include max-screen(1366px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 12px 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $green;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: $green;
+      color: #fff;
+    }
+  }
+  &__content{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include max-screen(1200px) {
+      padding: 0 15px 15px;
+    }
+  }
+  &__item {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &.active {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  &__cert{
+    width: calc(20% - 20px);
+    height: 100%;
+    @include max-screen(1080px) {
+      display: none;
+    }
+  }
+  &__cert-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    @include max-screen(1200px) {
+      height: 200px;
+    }
+  }
+  &__wrapper {
+    width: calc(22% - 20px);
+    @include max-screen(1080px) {
+      width: calc(20% - 20px);
+    }
+    @include max-screen(768px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__abs-img {
+    transform: scale(1.2);
+    margin: 0 auto;
+    @include max-screen(1366px) {
+      transform: scale(1);
+      height: 250px;
+    }
+    @include max-screen(500px) {
+      height: 150px;
+    }
+  }
+  &__info {
+    width: calc(33% - 20px);
+    padding: 30px 0;
+    color: #fff;
+    @include max-screen(1200px) {
+      padding: 20px 0;
+    }
+    @include max-screen(1080px) {
+      width: calc(40% - 20px);
+    }
+    @include max-screen(768px) {
+      width: calc(50% - 10px);
+    }
+    @include max-screen(580px) {
+      width: 100%;
+    }
+  }
+  &__buttons {
+    width: calc(25% - 20px);
+    & .new-btn {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    @include max-screen(1080px) {
+      width: calc(40% - 20px);
+    }
+    @include max-screen(768px) {
+      width: calc(50% - 10px);
+      text-align: center;
+    }
+    @include max-screen(580px) {
+      width: 100%;
+    }
+  }
+  &__title {
+    color: #fff;
+    font: bold 32px/40px $main-font;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    @include max-screen(1366px) {
+      font: bold 24px/30px $main-font;
+      margin-bottom: 10px;
+    }
+    @include max-screen(580px) {
+      text-align: center;
+      font: bold 18px/20px $main-font;
+    }
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+  &__price {
+    font: bold 20px/26px $main-font;
+    margin-bottom: 10px;
+    & span {
+      font: bold 32px/40px $main-font;
+      @include max-screen(1366px) {
+        font: bold 28px/32px $main-font;
+      }
+      @include max-screen(500px) {
+        font: bold 22px/28px $main-font;
+      }
+    }
+    @include max-screen(580px) {
+      text-align: center;
+    }
+  }
+  &__char {
+    position: relative;
+    font: bold 13px/18px $main-font;
+    color: #FFFFFF;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      transition: width 0.3s;
+    }
+    &:hover,
+    &:focus {
+      color: #fff;
+      &::after,
+      &::after {
+        width: 0;
+      }
+    }
+    @include max-screen(991px) {
+      display: none;
+    }
+  }
+}
+
+.r-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  z-index: 2;
+  &.show {
+    display: block;
+  }
+  &__title {
+    background: #f1f1f1;
+    font: 12px/14px $main-font;
+    text-transform: uppercase;
+    color: #000;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+  }
+  &__table {
+    th,td {
+      padding: 10px;
+      text-align: center;
+
+      &.active {
+        border-left: 1px solid $red;
+        border-right: 1px solid $red;
+      }
+    }
+  }
+}

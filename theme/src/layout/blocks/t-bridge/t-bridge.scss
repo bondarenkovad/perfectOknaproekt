@@ -1,0 +1,42 @@
+.t-bridge {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__item {
+    width: calc(33.3% - 40px);
+    height: 350px;
+    overflow: hidden;
+    @include max-screen(1367px) {
+      height: 250px;
+    }
+  }
+  &__img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  &__text {
+    p {
+      margin-bottom: 20px;
+    }
+    ol {
+      counter-reset: decimal;
+      li {
+        position: relative;
+        padding-left: 15px;
+        &::before {
+          counter-increment: decimal;
+          content: counter(decimal)'.';
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: #000;
+        }
+      }
+    }
+  }
+}

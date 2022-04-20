@@ -1,0 +1,187 @@
+.our-works {
+  background-color: $gray-bg;
+  padding: 40px 0;
+
+  &__text {
+    margin-bottom: 40px;
+    @include max-screen(1366px){
+      margin-bottom: 20px;
+    }
+    @include max-screen(991px){
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include max-screen(991px){
+      justify-content: center;
+    }
+  }
+
+  &__sidebar {
+    width: 370px;
+    @include max-screen(1366px){
+      width: 300px;
+    }
+    @include max-screen(991px){
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include max-screen(768px){
+      justify-content: space-between;
+    }
+  }
+
+  &__container {
+    width: calc(100% - 390px);
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    @include max-screen(1366px){
+      width: calc(100% - 320px);
+    }
+    @include max-screen(991px){
+      width: 100%;
+      height: auto;
+    }
+    @include max-screen(500px){
+      margin: 0;
+    }
+  }
+
+  &__filter {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    @include max-screen(1366px){
+      overflow-y: auto;
+      max-height: 300px;
+    }
+    @include max-screen(991px){
+      width: 100%;
+    }
+  }
+
+  &__tag {
+    margin:0 5px 10px;
+    display: inline-block;
+  }
+
+  &__tag-link {
+    color: #5c5c5c;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: $gray-bg;
+    border: 1px solid #c1c1c1;
+    border-radius: 25px;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+
+    &:hover,
+    &:focus,
+    .active{
+      color: $green;
+      border-color: $green;
+      background-color: #fff;
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: block;
+    height: 160px;
+    margin-bottom: 20px;
+
+    &:hover .our-works__icon,
+    &:focus .our-works__icon {
+      fill: $green;
+    }
+
+    @include max-screen(1366px){
+      height: 120px;
+    }
+    @include max-screen(991px){
+      width: 33.3%;
+      margin: 0 10px 20px;
+    }
+    @include max-screen(768px){
+      width: calc(50% - 10px);
+      margin: 0 0 20px;
+    }
+    @include max-screen(500px){
+      width: 100%;
+    }
+  }
+
+  &__v-img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    fill: #fff;
+    width: 62px;
+    height: 62px;
+    transform: translate(-50%, -50%);
+    transition: fill 0.3s;
+  }
+
+  &__item {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: calc(33.3% - 20px);
+    height: 130px;
+    display: flex!important;
+    margin: 0 10px 20px;
+    padding: 20px;
+    @include max-screen(991px){
+      margin-bottom: 0;
+    }
+    @include max-screen(500px){
+      margin: 0;
+
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      transition: 0.5s;
+      background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100% );
+    }
+    &:hover::after,
+    &:focus::after {
+      height: 110px;
+    }
+
+
+  }
+
+  &__subtitle {
+    font: bold 14px/20px $main-font;
+    color: #fff;
+    margin-top: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &__arrow {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+.p-main {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include max-screen(991px){
+    background-position: left;
+  }
+  & .s-title {
+    margin-bottom: 30px;
+    @include max-screen(1366px){
+      margin-bottom: 20px;
+    }
+  }
+  & .container {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    @include max-screen(991px){
+      min-height: auto;
+      padding: 40px 15px;
+    }
+  }
+  &__inner {
+    max-width: 500px;
+    @include max-screen(1200px){
+      text-align: center;
+    }
+    @include max-screen(991px){
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+  }
+}

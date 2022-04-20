@@ -1,0 +1,56 @@
+.r-table {
+  &__wrapper{
+    width: 100%;
+    overflow-x: auto;
+  }
+  &__ticket {
+    display: inline-block;
+    background: $red;
+    color: #fff;
+    width: 100%;
+    padding: 4px;
+    font: bold 12px/16px $main-font;
+  }
+  &__link{
+    position: relative;
+    display: inline-block;
+    color: $red;
+    font: bold 12px/16px $main-font;
+    transition: color 0.3s;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $red;
+      transition: width 0.3s;
+    }
+    &:hover,
+    &:focus {
+      color: $green;
+      &::after {
+        width: 0;
+      }
+    }
+  }
+  &__img {
+    width: 100px;
+    object-fit: contain;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid $gray-bg;
+  }
+  &__table {
+    @include max-screen(1200px){
+      width: 1200px;
+    }
+    & td,
+    & th {
+      border-bottom: 1px solid $gray-bg;
+      padding: 10px;
+    }
+  }
+
+}

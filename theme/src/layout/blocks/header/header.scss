@@ -1,0 +1,477 @@
+.new-header {
+  color: #000;
+  font: 16px/22px $main-font;
+
+  @include max-screen(1280px){
+    font: 14px/28px  $main-font;
+  }
+
+  .stellarnav.mobile {
+    ul {
+      background: #3E3C3C;
+    }
+  }
+  .stellarnav {
+    ul {
+      background: #3E3C3C;
+      >li.mob-cities {
+        display: none;
+        @include max-screen(991px){
+          padding: 15px;
+          .new-header__dropdown {
+
+          }
+          .new-header__cities-list {
+            position: absolute !important;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 30000 !important;
+          }
+          .new-header__cities {
+            span {
+              color: #fff;
+            }
+          }
+        }
+
+      }
+    }
+    .has-sub {
+      .has-sub {
+        .dd-toggle {
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .has-sub.open {
+        .dd-toggle {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .stellarnav.desktop {
+    >ul {
+      >li.mega {
+        >ul {
+          background-color: #3E3C3C;
+        }
+      }
+    }
+  }
+
+  &__top {
+    padding: 25px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    @include max-screen(1850px){
+      justify-content: space-between;
+      padding: 12px 30px;
+    }
+    @include max-screen(991px){
+      padding: 12px 0 12px 15px;
+      width: 100%;
+      & .new-btn-svg--red {
+        display: none;
+      }
+    }
+    @include max-screen(640px){
+      padding: 5px 0px 5px 15px;
+      flex-grow: 1;
+    }
+  }
+  &__logo {
+    max-width: 165px;
+    margin-right: 20px;
+    @include max-screen(1850px){
+      margin-right: 0;
+    }
+    @include max-screen(1280px){
+      max-width: 140px;
+      align-self: center;
+    }
+    @include max-screen(991px){
+      max-width: 100px;
+    }
+  }
+  &__logo-img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    @include max-screen(991px){
+      margin-bottom: 0px;
+    }
+  }
+  &__slogan {
+    font: bold 14px/19px $main-font;
+    text-align: center;
+    margin-bottom: 0;
+    color: #000;
+    @include max-screen(1280px){
+      font-size: 13px;
+    }
+    @include max-screen(991px){
+      display: none;
+    }
+  }
+  &__social {
+    @include max-screen(1850px){
+      flex-direction: column;
+      margin-right: 0;
+    }
+    @include max-screen(991px){
+      display: none;
+    }
+  }
+  &__social-list {
+    list-style: none;
+    margin: 0 0 0 40px;
+    padding: 0;
+    display: flex;
+    align-self: center;
+    @include max-screen(1850px){
+      margin: auto 0 0 0;
+    }
+  }
+  &__social-item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 12px;
+      @include max-screen(1280px){
+        margin-right: 5px;
+      }
+    }
+  }
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid $green;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 430px;
+    margin-right: 50px;
+    @include max-screen(1850px){
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 0;
+    }
+    @include max-screen(1280px){
+      justify-content: space-between;
+    }
+    @include max-screen(991px){
+      display: none;
+    }
+  }
+  &__info-where {
+    color: #3E3C3C;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0;
+    & span {
+      font-weight: bold;
+      color: #000;
+    }
+    @include max-screen(1850px){
+      margin-top: 0;
+    }
+    @include max-screen(1380px){
+      order: 2;
+    }
+  }
+  &__call {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    @include max-screen(1850px){
+      margin-left: 0;
+    }
+    @include max-screen(640px){
+      align-self: center;
+    }
+  }
+  &__info-item {
+    font: 14px/18px $main-font;
+    color: #3E3C3C;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: calc(50% - 10px);
+    @include max-screen(1850px){
+      width: 100%;
+    }
+    strong {
+      padding-left: 5px;
+    }
+    svg {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+    }
+    & .whatsapp-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__elem-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    align-self: center;
+    @include max-screen(1850px){
+      flex-direction: column;
+      align-self: unset;
+    }
+    @include max-screen(991px){
+      display: none;
+    }
+  }
+  &__free-m {
+    margin-right: 50px;
+    @include max-screen(1850px){
+      margin-right: 0;
+      order: 2;
+      margin-top: auto;
+    }
+    @include max-screen(991px){
+      display: none;
+    }
+  }
+  &__dropbtn {
+    background: #F4F4F4;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    padding: 8px 15px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 16px;
+      right: 12px;
+      border: 3px solid transparent;
+      border-top: 6px solid #C4C4C4;
+      transition: transform 0.3s;
+    }
+  }
+  &__dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+    &:hover {
+      .new-header__dropbtn {
+        background: #37A58C;
+      }
+    }
+    &:focus {
+      .new-header__dropbtn {
+        background: #37A58C;
+      }
+    }
+    &.open {
+      .new-header__cities-list {
+        display: block;
+        z-index: 100;
+      }
+    }
+  }
+  &__cities-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+  }
+  &__cities-item {
+    display: block;
+    a {
+      display: block;
+      padding: 12px 16px;
+      color: black;
+      text-decoration: none;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+  &__cities {
+    align-self: center;
+    @include max-screen(1850px){
+      margin-bottom: auto;
+    }
+  }
+  &__phone {
+    font: 21px/28px $main-font;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    span {
+      font-weight: bold;
+      padding-left: 5px;
+    }
+    svg {
+      margin-left: 10px;
+    }
+    @include max-screen(1280px){
+      margin-bottom: 0;
+      font: 16px/18px $main-font;
+    }
+    @include max-screen(640px){
+      font-size: 14px;
+      line-height: 18px;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  &__callback {
+    background: $red;
+    padding: 9px 28px 10px;
+  }
+
+  & .rehau-logo {
+    max-width: 118px;
+    overflow: hidden;
+    height: 50px;
+    & svg {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+    @include max-screen(1280px){
+      width: 80px;
+      height: auto;
+    }
+  }
+}
+
+.stellarnav {
+  overflow: visible!important;
+  z-index: 20;
+  &.desktop > ul > li.mega {
+    position: relative;
+  }
+  &.desktop > ul > li.mega > ul {
+    max-width: 220px;
+    width: 220px;
+    background-color: #6B6B6B;
+  }
+  &.mobile.right > ul {
+    max-width: 280px;
+  }
+  &.mobile ul,
+  & ul{
+    background: #6B6B6B;
+  }
+  &.desktop li.mega li {
+    display: block;
+    margin-left: 0;
+  }
+  & a,
+  & li a,
+  &.desktop > ul > li.mega > ul > li > a {
+    color:#fff;
+    &:hover,
+    &:focus {
+      background-color: $red;
+    }
+  }
+  & li a{
+    padding: 5px 10px;
+  }
+
+  &.desktop {
+    & > ul > li.mega > ul > li {
+      padding-bottom: 5px;
+    }
+  }
+
+  &.mobile {
+    width: auto;
+    z-index: 200;
+    &.active {
+      height: 100%;
+      @include max-screen(991px){
+        & .mob-cities {
+          display: block;
+        }
+      }
+    }
+    & .menu-toggle:nth-child(2),
+    & ul .close-menu:nth-child(2) {
+      display: none;
+    }
+  }
+
+  & .menu-toggle span.bars span {
+    background: #fff;
+    @include max-screen(991px){
+        background: #6B6B6B;
+      }
+    }
+
+  & .icon-close:before,
+  & .icon-close:after,
+  & a.dd-toggle .icon-plus:after,
+  & a.dd-toggle .icon-plus:before {
+    border-color: #fff;
+  }
+  @include max-screen(1024px){
+    & > ul > li > a {
+      padding: 20px 30px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    border-bottom: 1px solid #6B6B6B;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+
+
+  @media screen and (max-width: 991px) {
+    .stellarnav.mobile {
+      >ul {
+        >li {
+          >a.dd-toggle {
+            background-color: #DD0060;
+          }
+        }
+      }
+    }
+  }
+
+
+

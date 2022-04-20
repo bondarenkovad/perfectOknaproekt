@@ -1,0 +1,16 @@
+//- доставка
+extends ../layout.pug
+
+block head-inner
+	+title('Доставка')
+	+desc('Доставка description')
+
+block body-bottom-inner
+
+block sections
+	include ../blocks/breadcrumbs/breadcrumbs
+	include ../blocks/logistics/logistics
+	include ../blocks/delivery/delivery
+	include ../blocks/d-inform/d-inform
+	include ../blocks/del-schedule/del-schedule
+	include ../blocks/call-measurer/call-measurer

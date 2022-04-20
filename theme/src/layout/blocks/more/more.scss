@@ -1,0 +1,34 @@
+.more {
+  padding: 40px 0;
+  background-color: $gray-bg;
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__wrapper {
+    min-height: 320px;
+    background-repeat: no-repeat;
+    background-position: 30% center;
+    @include max-screen(991px){
+      background-position: 0 center;
+    }
+    @include max-screen(768px){
+      background-position: center -30px;
+    }
+    @include max-screen(500px){
+      background-size: contain;
+    }
+  }
+  &__info {
+    text-align: center;
+    padding: 60px 0 0 300px;
+    @include max-screen(768px){
+      padding: 320px 0 0;
+    }
+    @include max-screen(500px){
+      padding-top: 70%;
+    }
+  }
+}

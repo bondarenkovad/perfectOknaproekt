@@ -1,0 +1,45 @@
+.specifications {
+	padding: 60px 0;
+	background-color: $gray-bg;
+	@include max-screen(1366px) {
+		padding: 30px 0;
+	}
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@include max-screen(991px) {
+			justify-content: initial;
+			margin: 0 -10px;
+		}
+	}
+	&__item {
+		width: calc(50% - 25px);
+		margin-bottom: 30px;
+		@include max-screen(991px) {
+			margin: 0 10px;
+		}
+
+	}
+	&__img {
+		max-width: 100%;
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		margin-bottom: 20px;
+		@include max-screen(1366px) {
+			height: 200px;
+		}
+	}
+	&__title {
+		font: 800 16px/22px $main-font;
+		margin-bottom: 20px;
+	}
+	&__text {
+		@include max-screen(1200px) {
+			max-height: 140px;
+			overflow: auto;
+			padding-right: 10px;
+		}
+	}
+}

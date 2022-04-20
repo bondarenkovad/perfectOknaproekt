@@ -1,0 +1,99 @@
+.p-design {
+  padding: 40px 0;
+  color: #000000;
+  @include max-screen(1366px) {
+    padding: 30px 0;
+  }
+  &__text{
+    margin-bottom: 35px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    counter-reset: number;
+    @include max-screen(1200px) {
+      & .slick-list,
+      & .slick-track {
+        display: flex;
+      }
+    }
+    @include max-screen(480px) {
+      & .slick-arrow {
+        top: 10%;
+      }
+    }
+  }
+  &__card {
+    background-color: #fff;
+    padding: 25px;
+    width: calc(33.3% - 20px);
+    margin: 0 10px;
+    &._border {
+      border: 1px solid #C4C4C4;
+    }
+    &.mb-20 {
+      margin-bottom: 20px;
+    }
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include max-screen(640px) {
+      justify-content: center;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border: 20px solid $green;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    &._red {
+      border: 20px solid $red;
+    }
+    & ._numb {
+      position: relative;
+      font: bold 35px/40px $main-font;
+      color: $green;
+      &::after {
+        counter-increment: number;
+        content: counter(number);
+      }
+    }
+    &.mr-15 {
+      margin-right: 15px;
+    }
+  }
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: $green;
+    &._red {
+      fill: $red;
+    }
+  }
+  &__title {
+    font: bold 24px/32px $main-font;
+    margin-bottom: 8px;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__img {
+    height: 30px;
+    max-width: 50px;
+    width: 100%;
+    object-fit: contain;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+  }
+}

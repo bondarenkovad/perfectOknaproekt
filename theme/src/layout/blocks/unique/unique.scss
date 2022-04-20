@@ -1,0 +1,45 @@
+.unique {
+  &__list {
+    column-count: 2;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    color: #000000;
+    @include max-screen(768px) {
+      column-count: 1;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    width: 100%;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $green;
+      border-radius: 50%;
+    }
+  }
+  &__title {
+    font: bold 24px/30px $main-font;
+    margin-bottom: 10px;
+    @include max-screen(500px) {
+      font: bold 18px/20px $main-font;
+      margin-bottom: 5px;
+    }
+  }
+  &__wrapper {
+    @include max-screen(768px) {
+      padding-right: 15px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
+}

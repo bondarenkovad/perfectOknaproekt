@@ -1,0 +1,338 @@
+.windoors {
+	& .simplebar-track.simplebar-horizontal {
+		display: none;
+	}
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px 50px;
+		@include max-screen(1366px) {
+			margin-bottom: 30px;
+		}
+	}
+	&__card {
+		width: calc(33.3% - 30px);
+		margin: 0 -15px;
+	}
+
+	&__slider {
+		margin: 0 -10px 60px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.slick-slider .slick-list, .slick-slider .slick-track {
+			width: 100%;
+		}
+		@include max-screen(640px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__img {
+		margin: 0 10px;
+		height: auto;
+		max-width: 100%;
+		width: 100%;
+		object-fit: cover;
+		@include max-screen(640px) {
+			object-fit: contain;
+			height: 200px;
+		}
+	}
+
+	& .card {
+		background: #FFFFFF;
+		border: 1px solid #E3E3E3;
+		padding: 40px;
+		margin: 0 15px;
+		text-align: center;
+		@include max-screen(1366px) {
+			padding: 20px;
+		}
+		&__img {
+			height: 250px;
+			max-width: 100%;
+			width: 100%;
+			object-fit: contain;
+			margin-bottom: 40px;
+			@include max-screen(1366px) {
+				height: 150px;
+				margin-bottom: 10px;
+			}
+		}
+		&__title {
+			font: 800 20px/27px $main-font;
+			color: $green;
+			margin-bottom: 10px;
+		}
+		&__text {
+			max-width: 180px;
+			margin: 0 auto;
+			font-size: 14px;
+		}
+
+	}
+
+	& .colors {
+		&__title {
+			font: 800  20px/27px $main-font;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin: 0 -10px;
+		}
+		&__img {
+			width: calc(10% - 20px);
+			margin: 0 10px;
+		}
+	}
+
+	& .profile{
+		display: flex;
+		flex-wrap: wrap;
+		&__wrapper {
+			width: 30%;
+			border: 1px solid #E3E3E3;
+			@include max-screen(991px) {
+				width: 100%;
+			}
+		}
+		&__mnogo-cordeon {
+			width: 70%;
+			@include max-screen(991px) {
+				width: 100%;
+			}
+		}
+		&__img {
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			@include max-screen(991px) {
+				height: 300px;
+			}
+		}
+	}
+
+	& .mnogo-cordeon {
+		&__head {
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			border: 1px solid #E3E3E3;
+			padding: 20px 30px 20px;
+			width: 100%;
+			background: #fff;
+			cursor: pointer;
+			@include max-screen(560px) {
+				padding: 20px;
+			}
+			&.open .mnogo-cordeon__chevron {
+				transform: rotate(180deg);
+			}
+		}
+		&__title {
+			font: bold 16px/22px $main-font;
+			@include max-screen(560px) {
+				max-width: 220px;
+			}
+			@include max-screen(360px) {
+				max-width: 150px;
+			}
+		}
+		&__mark {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			flex-shrink: 0;
+			background-color: $green;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font: bold 12px/16px $main-font;
+			color: #FFFFFF;
+			margin-right: 20px;
+		}
+		&__body {
+			padding-top: 20px;
+			width: 100%;
+			text-align: left;
+			display: none;
+			font: normal 14px/22px $main-font;
+		}
+		&__chevron {
+			width: 40px;
+			height: 20px;
+			margin-left: auto;
+			fill: $green;
+			transition: transform 0.6s;
+		}
+	}
+
+	& .advantages {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: #fff;
+		padding: 0;
+		&__wrapper {
+			width: calc(30% - 20px);
+			border: 1px solid #E3E3E3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include max-screen(991px) {
+				width: 100%;
+			}
+		}
+		&__content {
+			width: calc(70% - 20px);
+			@include max-screen(991px) {
+				width: 100%;
+			}
+		}
+		&__block {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+		&__title {
+			font: bold 16px/22px $main-font;
+			color: $green;
+			margin-bottom: 10px;
+			@include max-screen(991px) {
+				text-align: center;
+			}
+		}
+		&__img {
+			max-width: 230px;
+			width: 100%;
+			height: 430px;
+			object-fit: contain;
+			@include max-screen(991px) {
+				height: 300px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	& .v-open {
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			@include max-screen(991px) {
+				margin: 0 -10px;
+				&.slick-slider .slick-track {
+					height: 100%;
+				}
+			}
+		}
+		&__card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			margin-bottom: 60px;
+			@include max-screen(991px) {
+				margin: 0 10px;
+			}
+			&--s {
+				width: 160px;
+			}
+			&--l {
+				width: 290px;
+			}
+		}
+		&__img {
+			margin-top: auto;
+			margin-bottom: 10px;
+		}
+		&__title {
+			font: bold  16px/22px $main-font;
+			@include max-screen(768px) {
+				min-height: 44px;
+			}
+		}
+	}
+
+	& .double-g {
+		&__title {
+			font: bold 16px/22px $main-font;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+			&.slick-slider .slick-track {
+				height: 100%;
+			}
+		}
+		&__card {
+			border: 1px solid #E3E3E3;
+			width: 50%;
+			padding: 20px 50px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			@include max-screen(640px) {
+				padding: 20px;
+			}
+		}
+		&__img {
+			width: calc(40% - 10px);
+			flex-shrink: 0;
+			@include max-screen(580px) {
+				width: 100%;
+				height: 200px;
+				object-fit: contain;
+			}
+		}
+		&__content {
+			width: calc(60% - 10px);
+			@include max-screen(580px) {
+				width: 100%;
+
+			}
+		}
+		&__subtitle {
+			font: bold 16px/22px $main-font;
+			color: $green;
+			margin-bottom: 20px;
+			@include max-screen(580px) {
+				text-align: center;
+			}
+		}
+	}
+
+	& .simple-wrapper {
+		@include max-screen(580px) {
+			max-height: 420px;
+			overflow-x: auto;
+			padding-right: 10px;
+			& .simplebar-content {
+				overflow-x: hidden;
+			}
+		}
+	}
+
+	&__door-img {
+		margin: 0 10px;
+		height: auto;
+		max-width: 100%;
+		width: 100%;
+		object-fit: cover;
+		@include max-screen(640px) {
+			height: 200px;
+		}
+	}
+
+}
+

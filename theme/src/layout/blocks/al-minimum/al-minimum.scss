@@ -1,0 +1,39 @@
+.al-minimum {
+  &__header {
+    max-width: 550px;
+    @include max-screen(1200px) {
+      margin: 0 auto 20px;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & .slick-arrow {
+      top: 100%;
+    }
+  }
+  &__item {
+    width: calc(50% - 10px);
+    margin-bottom: 30px;
+    & ol {
+      counter-reset: decimal;
+      & li {
+        position: relative;
+        padding-left: 15px;
+        &::before {
+          counter-increment: decimal;
+          content: counter(decimal) ".";
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: #000;
+        }
+      }
+    }
+  }
+  &__title {
+    font: bold 20px/26px $main-font;
+    margin-bottom: 15px;
+  }
+}

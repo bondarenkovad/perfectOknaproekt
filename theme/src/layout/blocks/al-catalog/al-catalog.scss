@@ -1,0 +1,55 @@
+.al-catalog {
+  position: relative;
+  overflow: hidden;
+  background: #E5E5E5;
+  padding: 30px 80px;
+  @include max-screen(1200px){
+    padding: 30px;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    @include max-screen(991px){
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__inner {
+    position: relative;
+    max-width: 400px;
+    @include max-screen(1200px){
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255, 0.9);
+    }
+    @include max-screen(991px){
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    margin-bottom: 30px;
+    & p {
+      margin-bottom: 0;
+    }
+  }
+}
+.al-color {
+ background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  * {
+    color: #fff;
+
+  }
+  & strong {
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__inner {
+    @include max-screen(1200px){
+      background: rgba(0,0,0, 0.7);
+    }
+  }
+}

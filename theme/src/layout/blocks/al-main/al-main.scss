@@ -1,0 +1,62 @@
+.al-main {
+  padding: 60px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include max-screen(991px) {
+    background-position: left;
+  }
+  @include max-screen(500px) {
+    padding: 60px 0 30px;
+  }
+  &__inner {
+    @include max-screen(991px) {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+    @include max-screen(1200px) {
+      text-align: left;
+    }
+    @include max-screen(991px) {
+      text-align: center;
+    }
+  }
+  &__text {
+    font: bold 16px/20px $main-font;
+    margin-bottom: 40px;
+    & span {
+      color: $red;
+    }
+  }
+  &__list {
+    margin-bottom: 20px;
+    @include max-screen(991px) {
+      text-align: left;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 6px solid rgba(221, 0, 96, 0.5);
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $red;
+  }
+}
