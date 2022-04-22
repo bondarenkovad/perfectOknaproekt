@@ -6,6 +6,10 @@ $img: '../img/';
 /*
 	* Цвета
 */
+$primary: #1d4c56;
+$primary-dark: darken($primary, 15%);
+$secondary: #119b14;
+$secondary-dark: darken($secondary, 10%);
 $red: #dd0060;
 $green: #37a58c;
 $gray-bg: #e5e5e5;

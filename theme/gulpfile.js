@@ -47,9 +47,8 @@ const path = {
 		compile: './src/layout/common/*.{scss,sass}',
 		result: './default/css/',
 		libs: [
-			//'./src/files/libs/slick-slider/slick.css',
-			//'./src/files/libs/stellarnav/css/stellarnav.css',
-			//'./node_modules/magnific-popup/dist/magnific-popup.css',
+			'./src/files/libs/slick-slider/slick.css',
+			'./src/files/libs/stellarnav/css/stellarnav.css',
 			'./node_modules/simplebar/dist/simplebar.min.css'
 		]
 	},
@@ -58,11 +57,10 @@ const path = {
 		compile: './src/layout/common/*.js',
 		result: './default/js/',
 		libs: [
-			//'./node_modules/jquery/dist/jquery.min.js',
-			//'./node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+			'./node_modules/jquery/dist/jquery.min.js',
 			'./node_modules/inputmask/dist/jquery.inputmask.min.js',
-			//'./src/files/libs/slick-slider/slick.min.js',
-			//'./src/files/libs/stellarnav/js/stellarnav.js'
+			'./src/files/libs/slick-slider/slick.min.js',
+			'./src/files/libs/stellarnav/js/stellarnav.js'
 		]
 	},
 	images: {

@@ -1,4 +1,4 @@
-// import "../blocks/header/header";
+import "../blocks/header/header";
 import "../blocks/product-price/product-price";
 import "../blocks/windoors/windoors";
 import "../blocks/advantages/advantages";
@@ -28,16 +28,36 @@ import "../blocks/al-minimum/al-minimum";
 import "../blocks/al-furniture/al-furniture";
 import "../blocks/al-schema/al-schema";
 import { Accordion } from "../blocks/faq/accordion";
+import { Modal } from "../blocks/modal/modal";
 
 document.addEventListener("DOMContentLoaded", function (event) {
-	new Accordion();
-});
 
-window.jQuery(function() {
-	// window.jQuery('.js-call-popup').magnificPopup({
-	// 	type: 'inline',
-	// 	mainClass: 'popup',
-	// });
+	window.jQuery('.stellarnav').stellarNav({
+		position: 'right',
+		breakpoint: 990,
+		sticky: true,
+		closeLabel: 'Закрыть'
+	});
 
 	window.jQuery('input[type=tel]').inputmask("+7(999) 999-99-99");
+
+	new Accordion();
+
+	//--init modals
+	const modal = new Modal();
+	window.modal = modal;
+	window.modal.init();
+
+
 });
+
+// window.jQuery(function() {
+//
+//
+// 	// window.jQuery('.js-call-popup').magnificPopup({
+// 	// 	type: 'inline',
+// 	// 	mainClass: 'popup',
+// 	// });
+//
+//
+// });

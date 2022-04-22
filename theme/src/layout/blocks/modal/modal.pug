@@ -1,0 +1,24 @@
+div(data-modal="callback").modal
+	.modal__layer 
+	.modal__content
+		.modal__head
+			button.modal__close
+				svg.modal__icon.modal__icon--close
+					use(xlink:href="img/sprite.svg#close")
+		.modal__front
+			.modal__title Обратный звонок
+			.modal__descr Введите свои данные и менеджер перезвонит <br/>в течение <b>15 минут</b>
+			form(action="/").modal__form
+				.modal__group 
+					input(type="text" placeholder="Ваше имя").input.input_size_md
+				.modal__group
+					input(type="tel" placeholder="+7(999)999-99-99").input.input_size_md
+				.modal__group 
+					button(type='submit').modal__submit.btn.btn_type_secondary.btn_size_md Узнать
+			.modal__footer
+				.policy-box
+					.policy-box__checkbox
+						label.checkbox
+							input(type="checkbox" checked).checkbox__input
+							span.checkbox__mark.checkbox__mark_theme_dark
+					.policy-box__text Подтверждаю, что я ознакомлен с <a href="#">Политикой конфиденциальности</a>
