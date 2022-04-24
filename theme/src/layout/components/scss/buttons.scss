@@ -1,0 +1,43 @@
+.btn-svg {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #37A58C;
+  padding: 7px 22px 9px;
+  font-family: $main-font;
+  color: #FFFFFF;
+  background: $green;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  &:hover,
+  &:focus,
+  &:active{
+    outline: none;
+    background: #fff;
+    color: $green;
+    svg {
+      fill: $green;
+    }
+  }
+  svg {
+    margin-right: 14px;
+    fill: #fff;
+    transition: fill 0.3s;
+  }
+
+  &._red {
+    background: $red;
+    border-color: $red;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      background: #fff;
+      color: $red;
+      svg {
+        fill: $red;
+      }
+    }
+  }
+}
+
+

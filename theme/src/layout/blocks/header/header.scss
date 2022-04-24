@@ -1,4 +1,4 @@
-.new-header {
+.header {
   color: #000;
   font: 16px/22px $main-font;
 
@@ -18,17 +18,17 @@
         display: none;
         @include max-screen(991px){
           padding: 15px;
-          .new-header__dropdown {
+          .header__dropdown {
 
           }
-          .new-header__cities-list {
+          .header__cities-list {
             position: absolute !important;
             top: 100%;
             left: 0;
             width: 100%;
             z-index: 30000 !important;
           }
-          .new-header__cities {
+          .header__cities {
             span {
               color: #fff;
             }
@@ -65,9 +65,10 @@
   }
 
   &__top {
-    padding: 25px 60px;
+    padding: 12px 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     @include max-screen(1850px){
       justify-content: space-between;
       padding: 12px 30px;
@@ -85,7 +86,7 @@
     }
   }
   &__logo {
-    max-width: 165px;
+    max-width: 140px;
     margin-right: 20px;
     @include max-screen(1850px){
       margin-right: 0;
@@ -103,13 +104,12 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
     @include max-screen(991px){
       margin-bottom: 0px;
     }
   }
   &__slogan {
-    font: bold 14px/19px $main-font;
+    font: bold 13px/18px $main-font;
     text-align: center;
     margin-bottom: 0;
     color: #000;
@@ -121,6 +121,8 @@
     }
   }
   &__social {
+    display: flex;
+    flex-wrap: wrap;
     @include max-screen(1850px){
       flex-direction: column;
       margin-right: 0;
@@ -169,7 +171,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 430px;
+    max-width: 450px;
     margin-right: 50px;
     @include max-screen(1850px){
       flex-direction: column;
@@ -202,7 +204,6 @@
   &__call {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
     @include max-screen(1850px){
       margin-left: 0;
     }
@@ -279,17 +280,17 @@
     display: inline-block;
     margin-left: 12px;
     &:hover {
-      .new-header__dropbtn {
+      .header__dropbtn {
         background: #37A58C;
       }
     }
     &:focus {
-      .new-header__dropbtn {
+      .header__dropbtn {
         background: #37A58C;
       }
     }
     &.open {
-      .new-header__cities-list {
+      .header__cities-list {
         display: block;
         z-index: 100;
       }

@@ -11,7 +11,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 9999;
-  color: $primary;
+  color: #000;
   &._active {
     visibility: visible;
     opacity: 1;
@@ -69,9 +69,10 @@
     line-height: 120%;
   }
   &__title {
+    margin: 0 0 10px;
     font-weight: bold;
     font-family: inherit;
-    @include value("font-size", 18, 32);
+    @include value("font-size", 32, 18);
     line-height: 120%;
     text-align: center;
   }

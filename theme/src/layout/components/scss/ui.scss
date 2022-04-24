@@ -160,71 +160,13 @@ section {
 	}
 }
 
-.new-btn-svg {
-	display: flex;
-	align-items: center;
-	border: 1px solid #37A58C;
-	padding: 7px 22px 9px;
-	font-family: $main-font;
-	color: #FFFFFF;
-	background: #37A58C;
-	transition: background 0.3s, color 0.3s;
-	&:hover {
-		outline: none;
-		background: #fff;
-		color: #37A58C;
-		svg {
-			fill: #37A58C;
-		}
-	}
-	&:focus {
-		outline: none;
-		background: #fff;
-		color: #37A58C;
-		svg {
-			fill: #37A58C;
-		}
-	}
-	&:active {
-		outline: none;
-		background: #fff;
-		color: #37A58C;
-		svg {
-			fill: #37A58C;
-		}
-	}
-	svg {
-		margin-right: 14px;
-		fill: #fff;
-		transition: fill 0.3s;
+.policy-box {
+	&__text {
+		font-size: 13px;
 	}
 }
 
-.new-btn-svg--red {
-	background: #DD0060;
-	border-color: #DD0060;
-	&:hover {
-		color: #DD0060;
-		svg {
-			fill: #DD0060;
-		}
-	}
-	&:focus {
-		color: #DD0060;
-		svg {
-			fill: #DD0060;
-		}
-	}
-	&:active {
-		color: #DD0060;
-		svg {
-			fill: #DD0060;
-		}
-	}
-	@include max-screen(1850px){
-		margin-top: auto;
-	}
-}
+
 
 //.new-btn-after {
 //  position: relative;
