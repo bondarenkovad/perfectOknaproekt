@@ -1,4 +1,4 @@
-div(data-modal="callback").modal
+div(data-modal="measurer").modal
 	.modal__layer
 	.modal__content
 		.modal__head
@@ -15,11 +15,18 @@ div(data-modal="callback").modal
 							input(type="text" placeholder="Как Вас зовут?" class="form__input")
 						.form__field._w50
 							input(type="tel" placeholder="Телефон" class="form__input")
+					.form__row
+						.form__field
+							label.form__file-label
+								input(type="file" class="_hidden" id="input_file-upload")
+								span.form__file-text Прикрепить файл
+								svg.form__icon-file
+									use(xlink:href="img/sprite.svg#file")
 					input(type="submit" class="btn _green" value="Вызвать замерщика")
 		.modal__footer
-				.policy-box
-					.policy-box__checkbox
-						label.checkbox
-							input(type="checkbox" checked).checkbox__input
-							span.checkbox__mark.checkbox__mark_theme_dark
-					.policy-box__text Нажимая на кнопку, вы принимаете условия и даете cогласие на обработку <a href="#">персональных данных</a>
+			.policy-box
+				.policy-box__checkbox
+					label.checkbox
+						input(type="checkbox" checked).checkbox__input
+						span.checkbox__mark.checkbox__mark_theme_dark
+				.policy-box__text Нажимая на кнопку, вы принимаете условия и даете cогласие на обработку <a href="#">персональных данных</a>

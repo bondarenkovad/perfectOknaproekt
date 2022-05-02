@@ -7,7 +7,12 @@
     margin-bottom: 20px;
   }
 }
-
+.t-center {
+  text-align: center;
+}
+.t-right {
+  text-align: right;
+}
 .pb-0 {
   @include max-screen(580px) {
     padding-bottom: 0;

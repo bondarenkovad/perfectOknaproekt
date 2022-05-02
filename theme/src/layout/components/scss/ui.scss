@@ -67,13 +67,12 @@ section {
 	}
 }
 
-.new-btn {
+.btn {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	//height: 68px;
-	padding: 15px 30px;
+	padding: 14px 20px;
 	width: 100%;
 	max-width: 280px;
 	background-color: $red;
@@ -87,13 +86,11 @@ section {
 	&:active {
 		background-color: #fff;
 		color: $red;
-
 	}
 
-	&--green {
+	&._green {
 		background-color: $green;
 		border: 1px solid $green;
-
 		&:hover,
 		&:focus,
 		&:active {
@@ -101,28 +98,6 @@ section {
 			color: $green;
 
 		}
-	}
-}
-
-.btn-green {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 15px;
-	width: 100%;
-	max-width: 280px;
-	background-color: $green!important;
-	border: 1px solid $green!important;
-	font: bold 16px/25px $main-font;
-	cursor: pointer;
-	color: #fff;
-	transition: all 0.3s;
-	&:hover,
-	&:focus,
-	&:active {
-		background-color: #fff!important;
-		color: $green!important;
 	}
 }
 
@@ -163,6 +138,14 @@ section {
 .policy-box {
 	&__text {
 		font-size: 13px;
+	}
+	& a {
+		color: $red;
+		transition: color 0.3s;
+		&:hover,
+		&:focus {
+			color: #000;
+		}
 	}
 }
 
@@ -251,12 +234,6 @@ section {
 .slick-slider .slick-track {
 	display: flex;
 }
-.t-center {
-	text-align: center;
-}
-.t-right {
-	text-align: right;
-}
 
 .slick-arrow {
 	width: 40px;
@@ -299,68 +276,94 @@ section {
 	}
 }
 
+._hidden {
+	visibility: hidden;
+	display: none;
+}
+
 .form {
 	&__wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
 		@include max-screen(580px) {
 			flex-direction: column;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 10px;
+		@include max-screen(580px){
+			justify-content: center;
+			margin-bottom: 0;
 		}
 	}
 	&__field {
 		position: relative;
 		width: 100%;
-		margin-bottom: 10px;
-		&--flex {
-			max-width: 280px;
-			margin-right: 10px;
-			@include max-screen(768px) {
-				margin-right: 0;
-			}
+		@include max-screen(580px){
+			margin-bottom: 20px;
 		}
-		&--lg{
-			width: 55%;
-			@include max-screen(580px) {
-				max-width: 280px;
-				width: 100%;
-			}
-		}
-		&--m{
-			width: calc(55% - 10px);
-			margin-right: 10px;
+		//&--flex {
+		//	max-width: 280px;
+		//	margin-right: 10px;
+		//	@include max-screen(768px) {
+		//		margin-right: 0;
+		//	}
+		//}
+		//&--lg{
+		//	width: 55%;
+		//	@include max-screen(580px) {
+		//		max-width: 280px;
+		//		width: 100%;
+		//	}
+		//}
+		&._w50{
+			width: calc(50% - 10px);
 			@include max-screen(580px) {
               max-width: 280px;
               width: 100%;
               margin-right: 0;
 			}
 		}
-		&--sm {
-			width: 45%;
-			@include max-screen(580px) {
-				width: 100%;
-			}
-		}
+		//&--sm {
+		//	width: 45%;
+		//	@include max-screen(580px) {
+		//		width: 100%;
+		//	}
+		//}
 	}
 	&__input {
-		padding: 16px 24px!important;
+		padding: 14px 20px;
 		width: 100%;
 		background-color: #fff;
 		color:#000;
+		border: 1px solid #C4C4C4;
 		font: normal 16px/25px $main-font;
-		margin-bottom: 0!important;
 		&::placeholder {
 			color: #A4A4A4;
 		}
 		&.error {
 			border:1px solid  red;
 		}
-		&--border {
-			border: 1px solid #C4C4C4!important;
-		}
         &--icon {
-          padding: 16px 24px 16px 40px!important;
+          padding: 16px 24px 16px 40px;
         }
+	}
+	&__file-label {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		cursor: pointer;
+		color: $red;
+		text-decoration: underline;
+		font: 16px/22px $main-font;
+		& span {
+			padding-right: 10px;
+		}
+		@include max-screen(580px){
+			justify-content: center;
+		}
 	}
 	&__submit {
 		width: 100%;
@@ -391,19 +394,11 @@ section {
       fill: $green;
 	  z-index: 1;
     }
-}
-.popup {
-	& .mfp-content {
-		text-align: center;
-		max-width: 600px;
-		background-color: #F9F9F9;
-		border-radius: 5px;
-		padding: 40px;
-	}
-	&__title {
-		font: bold 24px/32px 'Gilroy';
-		color: #000000;
-		margin-bottom: 20px;
+	&__icon-file {
+		width: 15px;
+		height: 16px;
+		fill: $red;
+		z-index: 1;
 	}
 }
 

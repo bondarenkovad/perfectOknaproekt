@@ -13,3 +13,15 @@ export function  addSliderOnResize($element, $config, $media) {
 		});
 }
 
+export function addChooseFilename($nodeInput, $text) {
+	/*get input file name*/
+	// var inputFile = document.querySelector('#input_file-upload');
+	let inputFile = document.querySelector($nodeInput);
+	// let textSelector = document.querySelector('.input_text');
+	let textSelector = document.querySelector($text);
+	if( inputFile != null && textSelector != null ){
+		inputFile.addEventListener('change', function (e) {
+			textSelector.textContent = inputFile.value;
+		});
+	}
+}

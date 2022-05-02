@@ -23,9 +23,9 @@
     background-color: #fff;
     text-align: center;
     padding-top: 15px;
-    @include value("padding-bottom", 15, 30);
-    @include value("padding-left", 10, 53);
-    @include value("padding-right", 10, 53);
+    @include value("padding-bottom", 30, 15);
+    @include value("padding-left", 100, 10);
+    @include value("padding-right", 100, 10);
     margin: 0 15px;
     border-radius: 5px;
     z-index: 1200;
@@ -62,7 +62,12 @@
       max-width: 700px;
     }
   }
-
+  //&__front{
+  //  padding: 0 60px;
+  //  @include max-screen(768px){
+  //    padding: 0;
+  //  }
+  //}
   &__success-text {
     font-weight: bold;
     @include value("font-size", 28, 56);
