@@ -138,6 +138,9 @@ section {
 .policy-box {
 	&__text {
 		font-size: 13px;
+		@include max-screen(580px) {
+			text-align: center;
+		}
 	}
 	& a {
 		color: $red;
@@ -231,50 +234,50 @@ section {
 	}
 }
 
-.slick-slider .slick-track {
-	display: flex;
-}
-
-.slick-arrow {
-	width: 40px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: $green;
-	position: absolute;
-	cursor: pointer;
-	top: 50%;
-	transform: translateY(-50%);
-	border-radius: 50%;
-	z-index: 1;
-	&.slick-disabled{
-		background: #c7c7c7;
-		cursor: not-allowed;
-	}
-	&:focus,
-	&:hover {
-		background-color: #6B6B6B;
-	}
-}
-.slick-arrow svg{
-	width: 15px;
-	height: 15px;
-	fill: #fff;
-}
-.slick-prev {
-	transform: translateY(-50%) rotate(180deg);
-	left: 10px;
-	&::before {
-		content: none;
-	}
-}
-.slick-next {
-	right: 10px;
-	&::before {
-		content: none;
-	}
-}
+//.slick-slider .slick-track {
+//	display: flex;
+//}
+//
+//.slick-arrow {
+//	width: 40px;
+//	height: 40px;
+//	display: flex;
+//	align-items: center;
+//	justify-content: center;
+//	background: $green;
+//	position: absolute;
+//	cursor: pointer;
+//	top: 50%;
+//	transform: translateY(-50%);
+//	border-radius: 50%;
+//	z-index: 1;
+//	&.slick-disabled{
+//		background: #c7c7c7;
+//		cursor: not-allowed;
+//	}
+//	&:focus,
+//	&:hover {
+//		background-color: #6B6B6B;
+//	}
+//}
+//.slick-arrow svg{
+//	width: 15px;
+//	height: 15px;
+//	fill: #fff;
+//}
+//.slick-prev {
+//	transform: translateY(-50%) rotate(180deg);
+//	left: 10px;
+//	&::before {
+//		content: none;
+//	}
+//}
+//.slick-next {
+//	right: 10px;
+//	&::before {
+//		content: none;
+//	}
+//}
 
 ._hidden {
 	visibility: hidden;
@@ -302,7 +305,7 @@ section {
 		position: relative;
 		width: 100%;
 		@include max-screen(580px){
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 		}
 		//&--flex {
 		//	max-width: 280px;

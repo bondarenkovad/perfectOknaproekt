@@ -1,4 +1,5 @@
 import "../blocks/header/header";
+import "../blocks/main-slider/main-slider";
 // import "../blocks/product-price/product-price";
 // import "../blocks/windoors/windoors";
 // import "../blocks/advantages/advantages";
