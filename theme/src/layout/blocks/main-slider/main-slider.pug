@@ -42,3 +42,18 @@ section.main-slider
 						//	li.banner-list__item Скидка <span>на монтаж 10%</span>
 						//	li.banner-list__item Скидка <span>на профиль</span> белый  - <span>15%</span>, цветной  - <span>18%</span>
 						//button(class="btn _js-popup" data-trigger-modal="measurer") Записаться на замер!
+			.main-slider__slide.banner-summer(style="background-image: url(img/main-slider/summer-bg.jpg)")
+				.container
+					.banner-summer__inner
+						.banner-summer__promo Подарки ограничены!
+						.banner-summer__title Застекли балкон <br> или лоджию + отделка
+						.banner-summer__colored
+							img(src="img/main-slider/gift.png" alt="" class="banner-summer__img")
+							| Ламинат и сушилка в подарок
+						.banner-summer__text Действительно <span>до 25 июня</span>
+						.banner-summer__btn-wrapper
+							button(class="btn _js-popup" data-trigger-modal="callback") Рассчитать стоимость
+							button(class="invert-svg _red _js-popup" data-trigger-modal="measurer")
+								svg
+									use(xlink:href="img/sprite.svg#zamer")
+								| Записаться на замер

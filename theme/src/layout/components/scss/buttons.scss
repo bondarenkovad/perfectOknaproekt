@@ -1,8 +1,74 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  width: 100%;
+  max-width: 280px;
+  background-color: $red;
+  border: 1px solid $red;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: $red;
+  }
+
+  &._green {
+    background-color: $green;
+    border: 1px solid $green;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #fff;
+      color: $green;
+
+    }
+  }
+}
+
+.invert-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  width: 100%;
+  max-width: 280px;
+  background-color: transparent;
+  border: 1px solid $red;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $red;
+    color: #fff;
+  }
+  &--white {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #000;
+      color: #fff;
+
+    }
+  }
+}
+
 .btn-svg {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #37A58C;
-  padding: 7px 22px 9px;
+  border: 1px solid $green;
+  padding: 14px 20px;
   font-family: $main-font;
   color: #FFFFFF;
   background: $green;
@@ -20,6 +86,8 @@
   }
   svg {
     margin-right: 14px;
+    width: 16px;
+    height: 16px;
     fill: #fff;
     transition: fill 0.3s;
   }
@@ -30,7 +98,6 @@
     &:hover,
     &:focus,
     &:active {
-      outline: none;
       background: #fff;
       color: $red;
       svg {
@@ -40,4 +107,30 @@
   }
 }
 
-
+.invert-svg {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $red;
+  padding: 14px 20px;
+  font-family: $main-font;
+  color: $red;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  &:hover,
+  &:focus,
+  &:active{
+    background: $red;
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+  }
+  svg {
+    margin-right: 14px;
+    width: 16px;
+    height: 16px;
+    fill: $red;
+    transition: fill 0.3s;
+  }
+}
